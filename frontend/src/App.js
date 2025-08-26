@@ -9,8 +9,8 @@ function App() {
 
   const getWeather = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/weather?city=${city}`);
-      const forecastRes = await axios.get(`http://localhost:3001/forecast?city=${city}`);
+      const response = await axios.get(`https://weather-app-cqwe.onrender.com/weather?city=${city}`);
+      const forecastRes = await axios.get(`https://weather-app-cqwe.onrender.com/forecast?city=${city}`);
       setWeather(response.data);
       setForecast(forecastRes.data.forecast);
       setError("");
